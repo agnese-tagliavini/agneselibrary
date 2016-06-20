@@ -24,6 +24,12 @@ toferm['PP_shift'] = lambda (i,j,k):(j+myceil_div2(i),-j+myfloor_div2(i)-1,k+myc
 
 fromferm['PP_shift'] = lambda (i,j,k):(i+j+1,i-myceil_div2(i+j+1),k-myceil_div2(i+j+1))
 
+#-------- PP shifted paper-------------------------
+
+toferm['PP_shiftpap'] = lambda (i,j,k):(j+myceil_div2(i),-j+myfloor_div2(i)-1,-k-myfloor_div2(i)-1)
+
+fromferm['PP_shiftpap'] = lambda (i,j,k):(i+j+1,i-myceil_div2(i+j+1),-k-1+myfloor_div2(i+j+1))
+
 
 #-------- PH shifted-------------------------
 
@@ -64,6 +70,9 @@ PHtoPP = translate('PP_shift','PH_shift')
 
 PPtoXPH = translate('XPH_shift','PP_shift')
 XPHtoPP = translate('PP_shift', 'XPH_shift')
+
+PPtoPPpap = translate('PP_shiftpap','PP_shift')
+PPpaptoPP = translate('PP_shift', 'PP_shiftpap')
 
 PHtoXPH = translate('XPH_shift','PH_shift')
 XPHtoPH = translate('PH_shift','XPH_shift')
