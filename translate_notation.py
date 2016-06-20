@@ -80,6 +80,12 @@ XPHtoPH = translate('PH_shift','XPH_shift')
 PPtoPPg = translate('PP_georg','PP_shift')
 PPgtoPP = translate('PP_shift','PP_georg')
 
+PPpaptoPH = translate('PH_shift','PP_shiftpap')
+PHtoPPpap = translate('PP_shiftpap','PH_shift')
+
+PPpaptoXPH = translate('XPH_shift','PP_shiftpap')
+XPHtoPPpap = translate('PP_shiftpap', 'XPH_shift')
+
 PHtoPHg = translate('PH_georg','PH_shift')
 PHgtoPH = translate('PH_shift','PH_georg')
 
